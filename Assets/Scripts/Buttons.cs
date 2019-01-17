@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    public GameObject StartButton;
+    public GameObject CreditsButton;
+    public GameObject ExitButton;
+    public GameObject StartArrow;
+    public GameObject CreditsArrow;
+    public GameObject ExitArrow;
+
+    int Selected = 0;
 
     public void changeScene(string targetScene)
     {
@@ -18,5 +26,4 @@ public class Buttons : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
-
 }
