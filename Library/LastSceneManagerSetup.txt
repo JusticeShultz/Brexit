@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/FightingScene.unity
+- path: Assets/Scenes/FightingScene.unity
   isLoaded: 1
   isActive: 1
