@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         RaycastHit hit;
         if (Physics.Raycast(transform.position + new Vector3(0,1,0), -transform.up, out hit, 1) && transform.GetComponent<Rigidbody>().velocity.y <= 0) { //Grounded
+            Vector3 wishdir = new Vector3(Input.GetAxis("Horizontal" + PlayerNumber), Mathf.Max(Input.GetAxis("Vertical" + PlayerNumber), 0) * -6, 0) * Time.deltaTime * 10;
+            transform.GetComponent<Rigidbody>().velocity += wishdir;
+            print(wishdir);
             Debug.DrawRay(transform.position, -transform.up, Color.yellow);
             state = State.Idle;
             //if()
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 
         } else {
             inAir = true;
-            Vector3 wishdir = new Vector3(Input.GetAxis("Horizontal" + PlayerNumber), Mathf.Max(Input.GetAxis("Vertical" + PlayerNumber),0)*-6,0)*Time.deltaTime*10;
+            Vector3 wishdir = new Vector3(Input.GetAxis("Horizontal" + PlayerNumber), Mathf.Max(Input.GetAxis("Vertical" + PlayerNumber),0)*-10,0)*Time.deltaTime*6;
             transform.GetComponent<Rigidbody>().velocity += wishdir;
         }
     }
