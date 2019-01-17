@@ -15,26 +15,66 @@ public class Buttons : MonoBehaviour
 
     [SerializeField] int PlayerNumber;
 
-    int Selected = 0;
+    int Selected = 1;
     float LastDelta = 0;
 
     private void Update()
     {
         if (PlayerNumber == 0) PlayerNumber = 1;
 
-        if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5 && LastDelta < 0.1)
+        if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5 && LastDelta < 0.05 && LastDelta > -0.05)
         {
             Selected = Mathf.Clamp(++Selected, 1, 3);
         }
 
-        if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5 && LastDelta < 0.1)
+        if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5 && LastDelta < 0.05 && LastDelta > -0.05)
         {
             Selected = Mathf.Clamp(--Selected, 1, 3);
         }
 
         LastDelta = Input.GetAxis("Vertical" + PlayerNumber);
 
-        print(Selected);
+        //print(Selected);
+
+        StartArrow.GetComponent<Image>().enabled = (Selected == 1);
+        CreditsArrow.GetComponent<Image>().enabled = (Selected == 2);
+        ExitArrow.GetComponent<Image>().enabled = (Selected == 3);
+
+        if (StartArrow.GetComponent<Image>().enabled)
+        {
+            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, new Vector3(264.3f, 328, 0), 0.1f);
+            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, new Vector3(207, 239, 0), 0.1f);
+            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, new Vector3(207, 150.6f, 0), 0.1f);
+
+            if(Input.GetButtonDown("AButtonP1"))
+            {
+                changeScene("ReadyUp");
+            }
+        }
+
+        if (CreditsArrow.GetComponent<Image>().enabled)
+        {
+            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, new Vector3(207, 328, 0), 0.1f);
+            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, new Vector3(264.3f, 239, 0), 0.1f);
+            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, new Vector3(207, 150.6f, 0), 0.1f);
+
+            if (Input.GetButtonDown("AButtonP1"))
+            {
+                changeScene("Credits");
+            }
+        }
+
+        if (ExitArrow.GetComponent<Image>().enabled)
+        {
+            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, new Vector3(207, 328, 0), 0.1f);
+            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, new Vector3(207, 239, 0), 0.1f);
+            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, new Vector3(264.3f, 150.6f, 0), 0.1f);
+
+            if (Input.GetButtonDown("AButtonP1"))
+            {
+                exitGame();
+            }
+        }
     }
 
     public void changeScene(string targetScene)
