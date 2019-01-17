@@ -13,7 +13,29 @@ public class Buttons : MonoBehaviour
     public GameObject CreditsArrow;
     public GameObject ExitArrow;
 
+    [SerializeField] int PlayerNumber;
+
     int Selected = 0;
+    float LastDelta = 0;
+
+    private void Update()
+    {
+        if (PlayerNumber == 0) PlayerNumber = 1;
+
+        if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5 && LastDelta < 0.1)
+        {
+            Selected = Mathf.Clamp(++Selected, 1, 3);
+        }
+
+        if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5 && LastDelta < 0.1)
+        {
+            Selected = Mathf.Clamp(--Selected, 1, 3);
+        }
+
+        LastDelta = Input.GetAxis("Vertical" + PlayerNumber);
+
+        print(Selected);
+    }
 
     public void changeScene(string targetScene)
     {
