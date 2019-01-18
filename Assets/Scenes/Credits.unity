@@ -691,3 +691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0a028965582c0438b0b98751a6638c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartButton: {fileID: 0}
+  CreditsButton: {fileID: 0}
+  ExitButton: {fileID: 0}
+  StartArrow: {fileID: 0}
+  CreditsArrow: {fileID: 0}
+  ExitArrow: {fileID: 0}
+  PlayerNumber: 0

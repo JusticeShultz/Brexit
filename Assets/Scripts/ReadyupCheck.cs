@@ -15,8 +15,8 @@ public class ReadyupCheck : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Check1.GetComponent<Image>().enabled = P2Ready;
-        Check2.GetComponent<Image>().enabled = P1Ready;
+        Check1.GetComponent<Image>().enabled = P1Ready;
+        Check2.GetComponent<Image>().enabled = P2Ready;
 
         if (Input.GetButtonDown("AButtonP1"))
         {
