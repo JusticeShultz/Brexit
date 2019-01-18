@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/FighterWorkspace.unity
+- path: Assets/Scenes/ParkourMode.unity
   isLoaded: 1
   isActive: 1
