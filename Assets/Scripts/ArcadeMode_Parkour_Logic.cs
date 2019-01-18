@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ArcadeMode_Parkour_Logic : MonoBehaviour
 {
@@ -8,9 +10,9 @@ public class ArcadeMode_Parkour_Logic : MonoBehaviour
     public GameObject Panel2;
     public GameObject TimerObj;
 
-    bool Player1 = false;
-    bool Player2 = false;
-    int Timer = 0;
+    public bool Player1 = false;
+    public bool Player2 = false;
+    int Timer = 300;
 
     void Start ()
     {
@@ -21,24 +23,43 @@ public class ArcadeMode_Parkour_Logic : MonoBehaviour
     {
         if (Player1 == true || Player2 == true)
         {
-            ++Timer;
+            Panel1.SetActive(Player1);
+            Panel2.SetActive(Player2);
 
-            TimerObj.SetActive(true);
-
-            /*if (Player1 == true && Player2 == false)
+            if (Timer > 0)
             {
-                //Player1 wins.
+                --Timer;
+
+                TimerObj.SetActive(true);
+
+                if (Timer > 0)
+                    TimerObj.GetComponent<Text>().text = "1";
+                if (Timer > 60)
+                    TimerObj.GetComponent<Text>().text = "2";
+                if (Timer > 120)
+                    TimerObj.GetComponent<Text>().text = "3";
+                if (Timer > 180)
+                    TimerObj.GetComponent<Text>().text = "4";
+                if (Timer > 240)
+                    TimerObj.GetComponent<Text>().text = "5";
             }
-
-            if (Player1 == false && Player2 == true)
+            else
             {
-                //Player2 wins.
+                if (Player1 == true && Player2 == false)
+                {
+                    //Player1 wins.
+                }
+
+                if (Player1 == false && Player2 == true)
+                {
+                    //Player2 wins.
+                }
+
+                if (Player1 == true && Player2 == true)
+                {
+                    //Draw.
+                }
             }
-
-            if (Player1 == true && Player2 == true)
-            {
-                //Draw.
-            }*/
         }
     }
 }

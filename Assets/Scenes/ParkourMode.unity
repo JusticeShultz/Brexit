@@ -4993,6 +4993,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b06ecfbe8dc1a84593485059f1aad53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Panel1: {fileID: 0}
+  Panel2: {fileID: 0}
+  TimerObj: {fileID: 0}
 --- !u!1 &713725592
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,7 +5214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 727490327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07690b2fc25c20146af11f72c022b817, type: 3}
+  m_Script: {fileID: 11500000, guid: 9304815eb67b5cd418dac02d4775af5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetDoor: {fileID: 1712694156}
@@ -5580,7 +5583,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 747624217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07690b2fc25c20146af11f72c022b817, type: 3}
+  m_Script: {fileID: 11500000, guid: 9304815eb67b5cd418dac02d4775af5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetDoor: {fileID: 992683913}
