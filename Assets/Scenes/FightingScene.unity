@@ -1779,6 +1779,11 @@ Transform:
   m_Father: {fileID: 837265615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &377007312 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95921233820433250, guid: f34e51de381cf094389e7c38f4b8f395,
+    type: 2}
+  m_PrefabInternal: {fileID: 1144936319}
 --- !u!1 &392325891
 GameObject:
   m_ObjectHideFlags: 0
@@ -9592,6 +9597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerNumber: 1
+  animgraph: {fileID: 377007312}
 --- !u!1001 &1949804168
 Prefab:
   m_ObjectHideFlags: 0
