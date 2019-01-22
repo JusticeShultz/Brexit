@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class ArcadeMode_Parkour_Logic : MonoBehaviour
 {
@@ -21,16 +21,16 @@ public class ArcadeMode_Parkour_Logic : MonoBehaviour
 	
 	void Update ()
     {
+        Panel1.SetActive(Player1);
+        Panel2.SetActive(Player2);
+
         if (Player1 == true || Player2 == true)
         {
-            Panel1.SetActive(Player1);
-            Panel2.SetActive(Player2);
+            TimerObj.SetActive(true);
 
             if (Timer > 0)
             {
                 --Timer;
-
-                TimerObj.SetActive(true);
 
                 if (Timer > 0)
                     TimerObj.GetComponent<Text>().text = "1";
@@ -48,16 +48,19 @@ public class ArcadeMode_Parkour_Logic : MonoBehaviour
                 if (Player1 == true && Player2 == false)
                 {
                     //Player1 wins.
+                    SceneManager.LoadScene("Player1_Win");
                 }
 
                 if (Player1 == false && Player2 == true)
                 {
                     //Player2 wins.
+                    SceneManager.LoadScene("Player2_Win");
                 }
 
                 if (Player1 == true && Player2 == true)
                 {
                     //Draw.
+                    SceneManager.LoadScene("PlayerDraw_Win");
                 }
             }
         }

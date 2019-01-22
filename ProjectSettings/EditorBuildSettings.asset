@@ -6,21 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Other/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/UIScenes/MainMenu.unity
     guid: 4c70bcc6c8d534b4fb202f531602ef71
   - enabled: 1
-    path: Assets/Scenes/FightingScene.unity
+    path: Assets/Scenes/Playables/FightingScene.unity
     guid: f48fdd78400f7f5478006a87aac6ca24
   - enabled: 1
-    path: Assets/Scenes/FighterWorkspace.unity
+    path: Assets/Scenes/Other/FighterWorkspace.unity
     guid: 33fdd82b4a583f241a17b3de31bc648f
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/UIScenes/Credits.unity
     guid: 7ede910e73541bd42af802ca456eb3e0
   - enabled: 1
-    path: Assets/Scenes/ReadyUp.unity
+    path: Assets/Scenes/UIScenes/ReadyUp.unity
     guid: 66f72ba0d15bb894fb9d6342bbb984b2
+  - enabled: 1
+    path: Assets/Scenes/UIScenes/Player1_Win.unity
+    guid: 5d776707835aad3468140a2ab53433f7
+  - enabled: 1
+    path: Assets/Scenes/UIScenes/Player2_Win.unity
+    guid: d89a3b49c8b9f1149b7117762ab42fb3
+  - enabled: 1
+    path: Assets/Scenes/UIScenes/PlayerDraw_Win.unity
+    guid: 7a032441fade75244a42a7a5582744a3
   m_configObjects: {}
