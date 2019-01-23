@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/UIScenes/ReadyUp.unity
+- path: Assets/Scenes/Playables/ParkourMode.unity
   isLoaded: 1
   isActive: 1
