@@ -26,12 +26,12 @@ public class Buttons : MonoBehaviour
     {
         if (PlayerNumber == 0) PlayerNumber = 1;
 
-        if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5 && LastDelta < 0.05 && LastDelta > -0.05)
+        if (Input.GetAxis("Vertical" + PlayerNumber) > 0.1 && LastDelta < 0.01 && LastDelta > -0.01)
         {
             Selected = Mathf.Clamp(++Selected, 1, 3);
         }
 
-        if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5 && LastDelta < 0.05 && LastDelta > -0.05)
+        if (Input.GetAxis("Vertical" + PlayerNumber) < -0.1 && LastDelta < 0.01 && LastDelta > -0.01)
         {
             Selected = Mathf.Clamp(--Selected, 1, 3);
         }
