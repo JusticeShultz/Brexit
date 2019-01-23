@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/UIScenes/Credits.unity
+=======
 - path: Assets/Scenes/UIScenes/MainMenu.unity
+>>>>>>> cf8596d41fa405939794033d04fbf797bccd9012
   isLoaded: 1
   isActive: 1
