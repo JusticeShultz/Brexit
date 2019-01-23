@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour {
             }
         } else {
             inAir = true;
+            animgraph.SetInteger("State", 4);
             Vector3 wishdir = new Vector3(Input.GetAxis("Horizontal" + PlayerNumber), Mathf.Max(Input.GetAxis("Vertical" + PlayerNumber),0)*-10,0)*Time.deltaTime*6;
             transform.GetComponent<Rigidbody>().velocity += wishdir;
         }
