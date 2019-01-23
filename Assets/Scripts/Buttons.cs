@@ -12,6 +12,10 @@ public class Buttons : MonoBehaviour
     public GameObject StartArrow;
     public GameObject CreditsArrow;
     public GameObject ExitArrow;
+    public Vector3 QueuePos;
+    public Vector3 CreditsPos;
+    public Vector3 ExitPos;
+    public Vector3 HoveredOffset;
 
     [SerializeField] int PlayerNumber;
 
@@ -42,9 +46,9 @@ public class Buttons : MonoBehaviour
 
         if (StartArrow.GetComponent<Image>().enabled)
         {
-            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, new Vector3(264.3f, 328, 0), 0.1f);
-            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, new Vector3(207, 239, 0), 0.1f);
-            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, new Vector3(207, 150.6f, 0), 0.1f);
+            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, QueuePos + HoveredOffset, 0.1f);
+            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, CreditsPos, 0.1f);
+            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, ExitPos, 0.1f);
 
             if(Input.GetButtonDown("AButtonP1"))
             {
@@ -54,9 +58,9 @@ public class Buttons : MonoBehaviour
 
         if (CreditsArrow.GetComponent<Image>().enabled)
         {
-            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, new Vector3(207, 328, 0), 0.1f);
-            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, new Vector3(264.3f, 239, 0), 0.1f);
-            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, new Vector3(207, 150.6f, 0), 0.1f);
+            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, QueuePos, 0.1f);
+            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, CreditsPos + HoveredOffset, 0.1f);
+            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, ExitPos, 0.1f);
 
             if (Input.GetButtonDown("AButtonP1"))
             {
@@ -66,9 +70,9 @@ public class Buttons : MonoBehaviour
 
         if (ExitArrow.GetComponent<Image>().enabled)
         {
-            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, new Vector3(207, 328, 0), 0.1f);
-            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, new Vector3(207, 239, 0), 0.1f);
-            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, new Vector3(264.3f, 150.6f, 0), 0.1f);
+            StartButton.GetComponent<RectTransform>().position = Vector3.Lerp(StartButton.GetComponent<RectTransform>().position, QueuePos, 0.1f);
+            CreditsButton.GetComponent<RectTransform>().position = Vector3.Lerp(CreditsButton.GetComponent<RectTransform>().position, CreditsPos, 0.1f);
+            ExitButton.GetComponent<RectTransform>().position = Vector3.Lerp(ExitButton.GetComponent<RectTransform>().position, ExitPos + HoveredOffset, 0.1f);
 
             if (Input.GetButtonDown("AButtonP1"))
             {

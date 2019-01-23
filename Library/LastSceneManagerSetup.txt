@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/UIScenes/MainMenu.unity
+- path: Assets/Scenes/UIScenes/ReadyUp.unity
   isLoaded: 1
   isActive: 1
