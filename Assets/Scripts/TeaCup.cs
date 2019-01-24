@@ -5,10 +5,17 @@ using UnityEngine;
 public class TeaCup : MonoBehaviour {
     Rigidbody rg;
     public GameObject shattered;
+    public bool Direction = false;
+
+    bool DoOnce = false;
+
 	// Use this for initialization
 	void Start () {
         rg = transform.GetComponent<Rigidbody>();
-        Yeet(new Vector2(10, 10));
+
+        if(Direction)
+            Yeet(new Vector2(10, 10));
+        else Yeet(new Vector2(-10, 10));
     }
 	
 	// Update is called once per frame
@@ -26,7 +33,15 @@ public class TeaCup : MonoBehaviour {
         {
             other.gameObject.GetComponent<PlayerController>().Hit();
         }
-        Instantiate(shattered, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
+
+        print("Spawn");
+
+        if (!DoOnce)
+        {
+            Instantiate(shattered, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
+            DoOnce = true;
+        }
+
         Destroy(gameObject);
     }
 }
