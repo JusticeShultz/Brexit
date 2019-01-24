@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/Other/TeaCup.unity
-  isLoaded: 1
-  isActive: 1
