@@ -10,7 +10,7 @@ public class ReadyupCheck : MonoBehaviour
     public GameObject Check2;
     bool P1Ready = false;
     bool P2Ready = false;
-    int CountdownTimer = 180;
+    public int CountdownTimer = 180;
 	
 	// Update is called once per frame
 	void Update ()
@@ -48,7 +48,10 @@ public class ReadyupCheck : MonoBehaviour
             else
             {
                 GetComponent<Text>().text = "0";
-                SceneManager.LoadScene("ParkourMode");
+
+                if(GetComponent<ModeSelection>().Mode == 1)
+                    SceneManager.LoadScene("ParkourMode");
+                else SceneManager.LoadScene("FightingScene");
             }
         }
         else

@@ -116,6 +116,7 @@
     <Compile Include="Assets\Scripts\DoorLogic.cs" />
     <Compile Include="Assets\Scripts\IgnoreOtherPlayersCollider.cs" />
     <Compile Include="Assets\Scripts\Lock2D.cs" />
+    <Compile Include="Assets\Scripts\ModeSelection.cs" />
     <Compile Include="Assets\Scripts\ParkourCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerPressA.cs" />
