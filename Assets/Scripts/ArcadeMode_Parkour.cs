@@ -6,6 +6,7 @@ public class ArcadeMode_Parkour : MonoBehaviour
 {
     public GameObject TargetDoor;
     public GameObject EventHolder;
+    public GameObject This;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -16,7 +17,8 @@ public class ArcadeMode_Parkour : MonoBehaviour
             else if (name == "Player2")
                 EventHolder.GetComponent<ArcadeMode_Parkour_Logic>().Player2 = true;
 
-            enabled = false;
+            //enabled = false;
+            This.SetActive(false);
         }
     }
 }
