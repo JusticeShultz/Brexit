@@ -31,11 +31,7 @@ public class PlayerController : MonoBehaviour {
             transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
             rg.velocity = new Vector3(rg.velocity.x * 0.95f, rg.velocity.y, 0);
             if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) { //Jump //Not make the player go too fast.
-                if (rg.velocity.magnitude < maxVelocity){//do nothing
-                }
-                else {
                     rg.velocity = rg.velocity + new Vector3(0, 10, 0);
-                }
             } else if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5) {//Guard
                 state = State.Guard;
                 animgraph.SetInteger("State", 2);

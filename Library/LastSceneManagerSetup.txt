@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Playables/FightingScene.unity
-=======
-- path: Assets/Scenes/Other/MusicSpace.unity
->>>>>>> refs/remotes/origin/master
   isLoaded: 1
   isActive: 1
