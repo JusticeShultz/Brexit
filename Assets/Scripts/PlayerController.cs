@@ -39,19 +39,21 @@ public class PlayerController : MonoBehaviour {
             inAir = false;
             transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
             rg.velocity = new Vector3(rg.velocity.x * 0.95f, rg.velocity.y, 0);
-            
-            if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) //Jump //Not make the player go too fast.
-            { 
+
+            if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) //Jump 
+            {
                 rg.velocity = rg.velocity + new Vector3(0, 10, 0);
+            } else if (inAir && rg.velocity.magnitude < rg.velocity.sqrMagnitude) {//falling 
+                animgraph.SetBool("State",true);
             } else if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5) //Guard
             {
                 state = State.Guard;
                 animgraph.SetInteger("State", 2);
                 rg.velocity = new Vector3(0, 0, 0);
-            }  else if (Input.GetAxis("Horizontal" + PlayerNumber) > 0)
+            } else if (Input.GetAxis("Horizontal" + PlayerNumber) > 0)
             {
                 animgraph.SetInteger("State", 1);
-                if(!inAir)
+                if (!inAir)
                     rg.velocity = new Vector3(Mathf.Max(Input.GetAxis("Horizontal" + PlayerNumber) * 5, rg.velocity.x), 0, 0);
             } else if (Input.GetAxis("Horizontal" + PlayerNumber) < 0)
             {
