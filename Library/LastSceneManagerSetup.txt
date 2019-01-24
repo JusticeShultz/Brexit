@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Playables/FightingScene.unity
+=======
+- path: Assets/Scenes/Other/TeaCup.unity
+>>>>>>> 4d73882f5c14e98d5e8c559884e64a561e9d5fae
   isLoaded: 1
   isActive: 1
