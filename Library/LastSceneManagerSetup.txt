@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Playables/FightingScene.unity
-=======
 - path: Assets/Scenes/Playables/ParkourMode.unity
->>>>>>> ec4b1c419fef8e68faad88fbef0825cb13213454
   isLoaded: 1
   isActive: 1

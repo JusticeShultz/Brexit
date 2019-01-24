@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 54440342680931386}
   - component: {fileID: 114020431480682734}
   - component: {fileID: 114948282375195530}
+  - component: {fileID: 65951753824390256}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -1742,6 +1743,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65951753824390256
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617798241045276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95429743098391312
 Animator:
   serializedVersion: 3
@@ -1782,8 +1795,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f02214b24c7604b8e7d0752405a3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNumber: 1
+  maxVelocity: 0
   animgraph: {fileID: 0}
+  PlayerNumber: 1
 --- !u!137 &137472535988417896
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
