@@ -73,4 +73,8 @@ public class PlayerController : MonoBehaviour {
         }
         
     }
+    public
+    void Hit() {
+
+    }
 }

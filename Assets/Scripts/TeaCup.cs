@@ -19,7 +19,12 @@ public class TeaCup : MonoBehaviour {
         rg.velocity = new Vector3(dir.x, dir.y);
         
     }
-    void OnCollisionEnter() {
 
+    void OnTriggerEnter(Collider other) {
+        if (other.GetComponent<PlayerController>())
+        {
+            other.gameObject.GetComponent<PlayerController>().Hit();
+        }
+        Destroy(gameObject);
     }
 }
