@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Playables/ParkourMode.unity
+- path: Assets/Scenes/Other/TeaCup.unity
   isLoaded: 1
   isActive: 1

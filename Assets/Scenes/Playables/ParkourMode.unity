@@ -8294,6 +8294,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267726480}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1277213518 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95447469418315004, guid: 7b8f7e9870541c0438b2ced37540c94b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974952350}
 --- !u!1 &1277361760
 GameObject:
   m_ObjectHideFlags: 0
@@ -13063,7 +13068,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4321776619512268, guid: 7b8f7e9870541c0438b2ced37540c94b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.083937
+      value: -14.771
       objectReference: {fileID: 0}
     - target: {fileID: 4321776619512268, guid: 7b8f7e9870541c0438b2ced37540c94b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -13071,7 +13076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4321776619512268, guid: 7b8f7e9870541c0438b2ced37540c94b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.42462444
+      value: -0.425
       objectReference: {fileID: 0}
     - target: {fileID: 4321776619512268, guid: 7b8f7e9870541c0438b2ced37540c94b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13097,7 +13102,7 @@ Prefab:
         type: 2}
       propertyPath: animgraph
       value: 
-      objectReference: {fileID: 1411869296}
+      objectReference: {fileID: 1277213518}
     - target: {fileID: 54479326293275088, guid: 7b8f7e9870541c0438b2ced37540c94b,
         type: 2}
       propertyPath: m_Constraints
