@@ -48,7 +48,7 @@ public class ReadyupCheck : MonoBehaviour
             else
             {
                 GetComponent<Text>().text = "0";
-                SceneManager.LoadScene("FightingScene");
+                SceneManager.LoadScene("ParkourMode");
             }
         }
         else
