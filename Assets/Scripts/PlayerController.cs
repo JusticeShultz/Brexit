@@ -45,6 +45,26 @@ public class PlayerController : MonoBehaviour {
 
             RaycastHit hit;
 
+            --CD;
+
+            if (CD < 1) //yeet
+            {
+                if (Input.GetButtonDown("AButtonP1") && PlayerNumber == 1) //THIS IS NOT REUSABLE JUSTICE
+                {
+                    GameObject cup = Instantiate(meBigBoyCup, GetComponent<Transform>().position + new Vector3(0, 1, 0), GetComponent<Transform>().rotation);
+                    CD = 35;
+                    cup.GetComponent<TeaCup>().yeet(new Vector2(Input.GetAxis("Horizontal" + PlayerNumber), Input.GetAxis("Vertical" + PlayerNumber) * -1) * 10 + new Vector2(rg.velocity.x,rg.velocity.y + 5));
+                    cup.GetComponent<TeacupCollisionLogic>().player = Player.Player1;
+                }
+                else if (Input.GetButtonDown("AButtonP2") && PlayerNumber == 2)
+                {
+                    GameObject cup = Instantiate(meBigBoyCup, GetComponent<Transform>().position + new Vector3(0, 1, 0), GetComponent<Transform>().rotation);
+                    CD = 35;
+                    cup.GetComponent<TeaCup>().yeet(new Vector2(Input.GetAxis("Horizontal" + PlayerNumber), Input.GetAxis("Vertical" + PlayerNumber) * -1) * 10 + new Vector2(rg.velocity.x, rg.velocity.y + 5));
+                    cup.GetComponent<TeacupCollisionLogic>().player = Player.Player2;
+                }
+            }
+
             if (Physics.Raycast(transform.position + new Vector3(0, 1, 0), -transform.up * 1.01f, out hit, 1) && rg.velocity.y <= 0) //Grounded
             {
                 animgraph.SetInteger("State", 0);
@@ -61,28 +81,6 @@ public class PlayerController : MonoBehaviour {
                 }
                 else if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5) //Guard
                 {
-                    --CD;
-
-                    if (CD < 1)
-                    {
-                        if (Input.GetButtonDown("AButtonP1") && PlayerNumber == 1)
-                        {
-                            GameObject cup = Instantiate(meBigBoyCup, GetComponent<Transform>().position + new Vector3(0, 1, 0), GetComponent<Transform>().rotation);
-                            CD = 35;
-                            cup.GetComponent<TeacupCollisionLogic>().player = Player.Player1;
-
-                            cup.GetComponent<TeaCup>().Direction = Direction;
-                        }
-                        else if (Input.GetButtonDown("AButtonP2") && PlayerNumber == 2)
-                        {
-                            GameObject cup = Instantiate(meBigBoyCup, GetComponent<Transform>().position + new Vector3(0, 1, 0), GetComponent<Transform>().rotation);
-                            CD = 35;
-                            cup.GetComponent<TeacupCollisionLogic>().player = Player.Player2;
-
-                            cup.GetComponent<TeaCup>().Direction = Direction;
-                        }
-                    }
-
                     animgraph.SetInteger("State", 2);
                     rg.velocity = new Vector3(0, 0, 0);
                 }
@@ -118,8 +116,9 @@ public class PlayerController : MonoBehaviour {
         
     }
 
-    public void Hit()
+    public void Hit(Vector2 direction)
     {
+        rg.velocity += new Vector3(direction.x, direction.y, 0);
         TeacupStun = StunTime * 60;
     }
 }

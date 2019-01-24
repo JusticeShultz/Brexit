@@ -12,26 +12,24 @@ public class TeaCup : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rg = transform.GetComponent<Rigidbody>();
-
-        if(Direction)
-            Yeet(new Vector2(10, 10));
-        else Yeet(new Vector2(-10, 10));
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-    void Yeet(Vector2 dir) {
-        rg.isKinematic = false;
-        rg.velocity = new Vector3(dir.x, dir.y);
+
+    public void yeet(Vector2 dir) {
+        print("YEET");
+        transform.GetComponent<Rigidbody>().isKinematic = false;
+        transform.GetComponent<Rigidbody>().velocity = new Vector3(dir.x, dir.y);
         
     }
 
     void OnTriggerEnter(Collider other) {
         if (other.GetComponent<PlayerController>())
         {
-            other.gameObject.GetComponent<PlayerController>().Hit();
+            other.gameObject.GetComponent<PlayerController>().Hit(new Vector2(rg.velocity.x/4,12));
         }
 
         print("Spawn");
