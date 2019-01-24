@@ -159,6 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4180114944627592}
+  - component: {fileID: 114435876064851468}
   m_Layer: 0
   m_Name: Teacup_Shattered
   m_TagString: Untagged
@@ -785,6 +786,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bde37fd3d2fa24186c4d685fa890ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114435876064851468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1962615093774398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad19a40d5879e8e47bcf69a12716e823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 10
 --- !u!114 &114444033955191576
 MonoBehaviour:
   m_ObjectHideFlags: 1

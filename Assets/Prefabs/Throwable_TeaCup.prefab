@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 54341599817514686}
   - component: {fileID: 114505305664432540}
   m_Layer: 0
-  m_Name: TeaCup
+  m_Name: Throwable_TeaCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shattered: {fileID: 1962615093774398, guid: 975ba2389644fc4419971b49894e7af3, type: 2}
+  Direction: 0
 --- !u!114 &114505305664432540
 MonoBehaviour:
   m_ObjectHideFlags: 1

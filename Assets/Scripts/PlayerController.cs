@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rg;//Transform rigidbody
     public GameObject meBigBoyCup;
     public float maxVelocity;//sqr of max velocity
-    public int StunTime = 35;
+    public float StunTime = 0.5f;
 
     float currentVelocity;
     bool inAir;
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
     public Animator animgraph;
     int CD = 35;
     bool Direction = false;
-    int TeacupStun = 0;
+    float TeacupStun = 0;
 
     // Use this for initialization
     void Start () {
@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (TeacupStun > 0)
         {
-            TeacupStun = Mathf.Clamp(TeacupStun, 0, StunTime);
-
+            --TeacupStun;
             //Do the hit state here.
         }
         else
@@ -118,8 +117,9 @@ public class PlayerController : MonoBehaviour {
         }
         
     }
-    public
-    void Hit() {
 
+    public void Hit()
+    {
+        TeacupStun = StunTime * 60;
     }
 }

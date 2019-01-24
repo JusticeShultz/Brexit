@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\AudioSliderJoystick.cs" />
     <Compile Include="Assets\Scripts\Buttons.cs" />
     <Compile Include="Assets\Scripts\CreditsCinematic.cs" />
+    <Compile Include="Assets\Scripts\DestroyTimer.cs" />
     <Compile Include="Assets\Scripts\DontCollideWithPlayer.cs" />
     <Compile Include="Assets\Scripts\DoorLogic.cs" />
     <Compile Include="Assets\Scripts\IgnoreOtherPlayersCollider.cs" />
