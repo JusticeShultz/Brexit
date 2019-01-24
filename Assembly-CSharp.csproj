@@ -108,6 +108,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerPressA.cs" />
      <Compile Include="Assets\Scripts\ReadyupCheck.cs" />
+     <Compile Include="Assets\Scripts\TeaCup.cs" />
      <Compile Include="Assets\Sound\GlobalMoosic.cs" />
      <None Include="Assets\Art\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
