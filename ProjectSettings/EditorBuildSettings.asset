@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/UIScenes/MainMenu.unity
     guid: 4c70bcc6c8d534b4fb202f531602ef71
   - enabled: 1
+    path: Assets/Scenes/Playables/ParkourMode.unity
+    guid: 108d636bf20d0f14294fbdfd4a7149c5
+  - enabled: 1
     path: Assets/Scenes/Playables/FightingScene.unity
     guid: f48fdd78400f7f5478006a87aac6ca24
   - enabled: 1
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UIScenes/PlayerDraw_Win.unity
     guid: 7a032441fade75244a42a7a5582744a3
-  - enabled: 1
-    path: Assets/Scenes/Other/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/UIScenes/Settings.unity
     guid: ac8b1621f638c964a952ea7bb0018514
