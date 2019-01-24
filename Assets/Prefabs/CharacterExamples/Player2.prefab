@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 54479326293275088}
   - component: {fileID: 114498095311272442}
   - component: {fileID: 114071329298850938}
+  - component: {fileID: 65843375483916778}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -1742,6 +1743,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65843375483916778
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1449497670776588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95447469418315004
 Animator:
   serializedVersion: 3
@@ -1771,8 +1784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f02214b24c7604b8e7d0752405a3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNumber: 2
+  maxVelocity: 0
   animgraph: {fileID: 0}
+  PlayerNumber: 2
 --- !u!114 &114498095311272442
 MonoBehaviour:
   m_ObjectHideFlags: 1
