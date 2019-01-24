@@ -6,14 +6,14 @@ enum State { Idle, Guard, TeaHold, TeaYeet};
 public class PlayerController : MonoBehaviour {
     private Rigidbody rg;//Transform rigidbody
 
-    public int maxVelocity;//sqr of max velocity
-    public Animator animgraph;
+    public float maxVelocity;//sqr of max velocity
 
+    float currentVelocity;
     State state;
     bool inAir;
     [SerializeField]
     int PlayerNumber;
-
+    public Animator animgraph;
     // Use this for initialization
     void Start () {
         rg = transform.GetComponent<Rigidbody>();
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
             inAir = false;
             transform.position = new Vector3(transform.position.x, hit.point.y, transform.position.z);
             rg.velocity = new Vector3(rg.velocity.x * 0.95f, rg.velocity.y, 0);
-            if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5 && rg.velocity.sqrMagnitude < maxVelocity) { //Jump //Not make the player go too fast.
+            if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) { //Jump //Not make the player go too fast.
                     rg.velocity = rg.velocity + new Vector3(0, 10, 0);
             } else if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5) {//Guard
                 state = State.Guard;
