@@ -41,14 +41,8 @@ public class PlayerController : MonoBehaviour {
             transform.position = new Vector3(transform.position.x, hit.point.y-0.01f, transform.position.z);
             rg.velocity = new Vector3(rg.velocity.x * 0.95f, rg.velocity.y, 0);
 
-<<<<<<< HEAD
-            if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) //Jump 
-            {
-=======
-            animgraph.SetInteger("State", 0);
             if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) //Jump
             { 
->>>>>>> ef395e27f9cf5d8778b52be165917a3dd65808ce
                 rg.velocity = rg.velocity + new Vector3(0, 10, 0);
             } else if (inAir && rg.velocity.magnitude < rg.velocity.sqrMagnitude) {//falling 
                 animgraph.SetBool("State",true);
