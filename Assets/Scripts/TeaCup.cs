@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TeaCup : MonoBehaviour {
     Rigidbody rg;
+    public GameObject shattered;
 	// Use this for initialization
 	void Start () {
         rg = transform.GetComponent<Rigidbody>();
@@ -25,6 +26,7 @@ public class TeaCup : MonoBehaviour {
         {
             other.gameObject.GetComponent<PlayerController>().Hit();
         }
+        Instantiate(shattered, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
         Destroy(gameObject);
     }
 }

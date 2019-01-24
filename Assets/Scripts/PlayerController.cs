@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum State { Idle, Guard, TeaHold, TeaYeet};
 public class PlayerController : MonoBehaviour {
     private Rigidbody rg;//Transform rigidbody
-
+    public GameObject meBigBoyCup;
     public float maxVelocity;//sqr of max velocity
 
     float currentVelocity;
-    State state;
     bool inAir;
     [SerializeField]
     int PlayerNumber;
@@ -37,17 +35,23 @@ public class PlayerController : MonoBehaviour {
             Vector3 wishdir = new Vector3(Input.GetAxis("Horizontal" + PlayerNumber), Mathf.Max(Input.GetAxis("Vertical" + PlayerNumber), 0) * -6, 0) * Time.deltaTime * 10;
             rg.velocity += wishdir;
             Debug.DrawRay(transform.position, -transform.up, Color.yellow);
-            state = State.Idle;
             inAir = false;
             transform.position = new Vector3(transform.position.x, hit.point.y-0.01f, transform.position.z);
             rg.velocity = new Vector3(rg.velocity.x * 0.95f, rg.velocity.y, 0);
+
+            if (Input.GetButtonDown("AButtonP1") && PlayerNumber == 1)
+            {
+                Instantiate(meBigBoyCup, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
+            } else if (Input.GetButtonDown("AButtonP2") && PlayerNumber == 2)
+            {
+                Instantiate(meBigBoyCup, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
+            }
 
             if (Input.GetAxis("Vertical" + PlayerNumber) < -0.5) //Jump
             { 
                 rg.velocity = rg.velocity + new Vector3(0, 10, 0);
             } else if (Input.GetAxis("Vertical" + PlayerNumber) > 0.5) //Guard
             {
-                state = State.Guard;
                 animgraph.SetInteger("State", 2);
                 rg.velocity = new Vector3(0, 0, 0);
             } else if (Input.GetAxis("Horizontal" + PlayerNumber) > 0)
