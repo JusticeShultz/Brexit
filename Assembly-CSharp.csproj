@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\FightMode_DoorLock.cs" />
     <Compile Include="Assets\Scripts\IgnoreOtherPlayersCollider.cs" />
     <Compile Include="Assets\Scripts\Lock2D.cs" />
+    <Compile Include="Assets\Scripts\LogoLoad.cs" />
     <Compile Include="Assets\Scripts\ModeSelection.cs" />
     <Compile Include="Assets\Scripts\ParkourCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
