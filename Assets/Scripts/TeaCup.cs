@@ -20,7 +20,7 @@ public class TeaCup : MonoBehaviour {
 	}
 
     public void yeet(Vector2 dir) {
-        print("YEET");
+        //print("YEET");
         transform.GetComponent<Rigidbody>().isKinematic = false;
         transform.GetComponent<Rigidbody>().velocity = new Vector3(dir.x, dir.y);
         
@@ -32,7 +32,7 @@ public class TeaCup : MonoBehaviour {
             other.gameObject.GetComponent<PlayerController>().Hit(new Vector2(rg.velocity.x/4,12));
         }
 
-        print("Spawn");
+        //print("Spawn");
 
         if (!DoOnce)
         {

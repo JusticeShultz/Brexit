@@ -10,10 +10,11 @@ public class PlayerPressA : MonoBehaviour
     public Player PlayerSet;
     public string LevelToLoad;
     public bool IsBButton = false;
+    public bool IsYButton = false;
 
-	void Update ()
+    void Update ()
     {
-        if(IsBButton)
+        if (IsBButton)
         {
             if (PlayerSet == Player.Player1)
             {
@@ -30,18 +31,41 @@ public class PlayerPressA : MonoBehaviour
                 }
             }
         }
-        else if (PlayerSet == Player.Player1)
+        else
         {
-            if (Input.GetButtonDown("AButtonP1"))
+            if (IsYButton)
             {
-                changeScene(LevelToLoad);
+                if (PlayerSet == Player.Player1)
+                {
+                    if (Input.GetButtonDown("YButtonP1"))
+                    {
+                        changeScene(LevelToLoad);
+                    }
+                }
+                else if (PlayerSet == Player.Player2)
+                {
+                    if (Input.GetButtonDown("YButtonP2"))
+                    {
+                        changeScene(LevelToLoad);
+                    }
+                }
             }
-        }
-        else if (PlayerSet == Player.Player2)
-        {
-            if (Input.GetButtonDown("AButtonP2"))
+            else
             {
-                changeScene(LevelToLoad);
+                if (PlayerSet == Player.Player1)
+                {
+                    if (Input.GetButtonDown("AButtonP1"))
+                    {
+                        changeScene(LevelToLoad);
+                    }
+                }
+                else if (PlayerSet == Player.Player2)
+                {
+                    if (Input.GetButtonDown("AButtonP2"))
+                    {
+                        changeScene(LevelToLoad);
+                    }
+                }
             }
         }
     }

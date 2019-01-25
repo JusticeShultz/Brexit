@@ -1204,6 +1204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565092780}
   - component: {fileID: 565092781}
+  - component: {fileID: 565092782}
   m_Layer: 0
   m_Name: MA Body 2
   m_TagString: Untagged
@@ -1319,6 +1320,39 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000018253922, y: -0.0011205347, z: 0.000004181522}
     m_Extent: {x: 0.004741017, y: 0.00878588, z: 0.0020002197}
   m_DirtyAABB: 0
+--- !u!114 &565092782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565092779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be124c0923b3cb449d4fa18bf1be181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skin: 2
+  Head_1: {fileID: 4300024, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_2: {fileID: 4300014, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_3: {fileID: 4300022, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_4: {fileID: 4300012, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_5: {fileID: 4300020, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_6: {fileID: 4300028, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_7: {fileID: 4300036, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_8: {fileID: 4300032, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_9: {fileID: 4300026, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_10: {fileID: 4300010, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_11: {fileID: 4300018, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_12: {fileID: 4300030, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_13: {fileID: 4300034, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_14: {fileID: 4300016, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_15: {fileID: 4300000, guid: df3e195e1c101634ea7db6ad132aaa29, type: 3}
+  Head_16: {fileID: 4300000, guid: b309c960ef7b2174cbca283b444f70e5, type: 3}
+  Body_1: {fileID: 4300002, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_2: {fileID: 4300004, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_3: {fileID: 4300006, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_4: {fileID: 4300008, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_5: {fileID: 4300000, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
 --- !u!1 &601168706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,6 +3296,7 @@ MonoBehaviour:
   PlayerSet: 0
   LevelToLoad: MainMenu
   IsBButton: 0
+  IsYButton: 0
 --- !u!4 &1658029393
 Transform:
   m_ObjectHideFlags: 0
@@ -3835,6 +3870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2086573426}
   - component: {fileID: 2086573427}
+  - component: {fileID: 2086573428}
   m_Layer: 0
   m_Name: Head 4
   m_TagString: Untagged
@@ -3948,6 +3984,39 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000067351502, y: 0.008246366, z: 0.00003170315}
     m_Extent: {x: 0.0015866254, y: 0.0018983027, z: 0.0018500409}
   m_DirtyAABB: 0
+--- !u!114 &2086573428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2086573425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be124c0923b3cb449d4fa18bf1be181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skin: 0
+  Head_1: {fileID: 4300024, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_2: {fileID: 4300014, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_3: {fileID: 4300022, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_4: {fileID: 4300012, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_5: {fileID: 4300020, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_6: {fileID: 4300028, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_7: {fileID: 4300036, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_8: {fileID: 4300032, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_9: {fileID: 4300026, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_10: {fileID: 4300010, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_11: {fileID: 4300018, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_12: {fileID: 4300030, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_13: {fileID: 4300034, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_14: {fileID: 4300016, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Head_15: {fileID: 4300000, guid: df3e195e1c101634ea7db6ad132aaa29, type: 3}
+  Head_16: {fileID: 4300000, guid: b309c960ef7b2174cbca283b444f70e5, type: 3}
+  Body_1: {fileID: 4300002, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_2: {fileID: 4300004, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_3: {fileID: 4300006, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_4: {fileID: 4300008, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
+  Body_5: {fileID: 4300000, guid: fe3472b91f5844bed93534d1b064ae23, type: 3}
 --- !u!1 &2110155968
 GameObject:
   m_ObjectHideFlags: 0
