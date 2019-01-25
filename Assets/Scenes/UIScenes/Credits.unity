@@ -211,6 +211,7 @@ MonoBehaviour:
   PlayerSet: 1
   LevelToLoad: MainMenu
   IsBButton: 1
+  IsYButton: 0
 --- !u!4 &93263522
 Transform:
   m_ObjectHideFlags: 0
@@ -831,6 +832,7 @@ MonoBehaviour:
   PlayerSet: 0
   LevelToLoad: MainMenu
   IsBButton: 1
+  IsYButton: 0
 --- !u!4 &640212708
 Transform:
   m_ObjectHideFlags: 0
