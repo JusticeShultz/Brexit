@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody rg;//Transform rigidbody
@@ -120,5 +121,18 @@ public class PlayerController : MonoBehaviour {
     {
         rg.velocity += new Vector3(direction.x, direction.y, 0);
         TeacupStun = StunTime * 60;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        
+        if (sceneName == "FightingScene")
+        {
+            GameObject door = GameObject.Find("DoorControl");
+
+            if(PlayerNumber == 1)
+                door.GetComponent<FightMode_DoorLock>().HitCountP1 -= 1;
+            else if (PlayerNumber == 2)
+                door.GetComponent<FightMode_DoorLock>().HitCountP2 -= 1;
+        }
     }
 }

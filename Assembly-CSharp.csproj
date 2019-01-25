@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\DestroyTimer.cs" />
     <Compile Include="Assets\Scripts\DontCollideWithPlayer.cs" />
     <Compile Include="Assets\Scripts\DoorLogic.cs" />
+    <Compile Include="Assets\Scripts\FightMode_DoorLock.cs" />
     <Compile Include="Assets\Scripts\IgnoreOtherPlayersCollider.cs" />
     <Compile Include="Assets\Scripts\Lock2D.cs" />
     <Compile Include="Assets\Scripts\ModeSelection.cs" />
